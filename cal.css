@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, #7c3aed, transparent 35%),
+        radial-gradient(circle at bottom right, #06b6d4, transparent 35%),
+        #090b16;
+}
+
+/* Calculator */
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Title */
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+/* Display */
+
+.display-box {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 18px;
+    padding: 8px;
+    margin-bottom: 18px;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    text-align: right;
+    font-size: 38px;
+    font-weight: bold;
+
+    padding: 10px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 62px;
+
+    border: none;
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.10);
+    color: white;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* Operators */
+
+.operator {
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
+}
+
+.operator:hover {
+    background: linear-gradient(135deg, #8b5cf6, #818cf8);
+}
+
+/* Special buttons */
+
+.special {
+    background: rgba(239, 68, 68, 0.75);
+}
+
+.special:hover {
+    background: #ef4444;
+}
+
+/* Equal */
+
+.equal {
+    background: linear-gradient(135deg, #06b6d4, #14b8a6);
+}
+
+.equal:hover {
+    background: linear-gradient(135deg, #22d3ee, #2dd4bf);
+}
+
+/* Zero */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 92%;
+        padding: 20px;
+    }
+
+    button {
+        height: 56px;
+    }
+
+    #display {
+        font-size: 32px;
+    }
+}
