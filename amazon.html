@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon Clone</title>
+
+    <link rel="stylesheet" href="amazon.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            amazon<span>.in</span>
+        </div>
+
+        <div class="location">
+            <small>Deliver to</small>
+            <strong>📍 India</strong>
+        </div>
+
+        <div class="search-box">
+            <select id="category">
+                <option>All</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home</option>
+                <option>Books</option>
+            </select>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Amazon"
+            >
+
+            <button onclick="searchProducts()">🔍</button>
+        </div>
+
+        <div class="nav-item">
+            <small>Hello, Sign in</small>
+            <strong>Account & Lists</strong>
+        </div>
+
+        <div class="nav-item">
+            <small>Returns</small>
+            <strong>& Orders</strong>
+        </div>
+
+        <div class="cart" onclick="showCart()">
+            🛒
+            <span id="cartCount">0</span>
+            <strong>Cart</strong>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MENU ================= -->
+
+    <nav class="menu">
+
+        <div>☰ All</div>
+        <div>Today's Deals</div>
+        <div>Customer Service</div>
+        <div>Registry</div>
+        <div>Gift Cards</div>
+        <div>Sell</div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Amazon</h1>
+
+            <p>
+                Discover amazing products at the best prices.
+            </p>
+
+            <button onclick="scrollToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <div class="category-icon">📱</div>
+                <h3>Electronics</h3>
+                <p>Phones, laptops & more</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">👕</div>
+                <h3>Fashion</h3>
+                <p>Clothing & accessories</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🏠</div>
+                <h3>Home</h3>
+                <p>Furniture & appliances</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📚</div>
+                <h3>Books</h3>
+                <p>Books & education</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="productsSection">
+
+        <h2>Popular Products</h2>
+
+        <div id="products" class="products-container">
+
+            <!-- Products will come from JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <div id="cartBox" class="cart-box">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button onclick="closeCart()">✕</button>
+
+        </div>
+
+        <div id="cartItems">
+
+            <p>Your cart is empty.</p>
+
+        </div>
+
+        <div class="cart-total">
+
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <button onclick="checkout()">
+                Proceed to Buy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-top">
+            Back to top
+        </div>
+
+        <div class="footer-container">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+            </div>
+
+            <div>
+                <h3>Connect with Us</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+                <p>YouTube</p>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <p>Sell on Amazon</p>
+                <p>Affiliate</p>
+                <p>Advertise Products</p>
+                <p>Become a Partner</p>
+            </div>
+
+            <div>
+                <h3>Let Us Help You</h3>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Help</p>
+                <p>Shipping</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Amazon Clone | Created for Learning
+
+        </div>
+
+    </footer>
+
+
+    <script src="amazon.js"></script>
+
+</body>
+</html>
